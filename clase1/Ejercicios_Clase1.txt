@@ -1,0 +1,73 @@
+#Ejercicos Clase 1
+#Comandos basicos para visualización, creación y eliminación de archivos
+
+####Navegación por directorios####
+
+1.-$pwd ---> Imprime en la pantalla la ruta completa del directorio actual
+
+2.-$ls ---> Muestra los archivos y carpetas en el directorio actual
+
+3.-$ls -l ---> Muestra una lista detallada de los archivos y directorios
+	esta opción nos muestra a detalle los permisos y caracteristicas
+
+	r -> Del inglés read, indica el permiso de lectura sobre este archivo o directorio.
+	w -> Del inglés write, indica el permiso de escritura sobre este archivo o directorio.
+	x -> Del inglés execution, indica el permiso de ejecución sobre este archivo o directorio.
+	El guión indica la ausencia de ese permiso.
+	Como verás, son 10 caracteres que vemos en esta combinación
+
+	El primero nos indica el tipo. Si es un archivo nos mostrará un guión y si es un directorio 
+	nos mostrará una d.
+	Los siguientes 3 corresponden a los permisos otorgados al propietario de este archivo
+	Las posiciones 5, 6 y 7 nos indican los permisos que tiene el grupo.
+	Los últimos 3 caracteres nos indica que permisos tienen otros.
+	
+	Si vemos esta combinación:
+
+	drwxr-xr-x
+	
+	sto significa que:
+
+	d =>  esto es un directorio
+	rwx =>El propietario tiene permisos de lectura, escritura y ejecución 
+	r-x => El grupo tiene permisos de lectura y de ejecución, pero NO de escritura 
+	r-x => Otros tiene permiso de lectura y de ejecución, pero NO de escritura 
+
+4.-$ls -a ---> Muestra los todos los archivos, incluidos los archivos oculto (aquellos cuyo
+	nombre empieza con un punto ".")
+
+####Cambiar de directorio####
+
+5.-$cd direción_del_directorio ---> cambiar al directorio especificado
+
+6.-$cd .. ---> Sube un nivel en la jerarquia de directorios
+
+7.-$cd ~ ---> Cambiar al directorio "home" del usuario actual
+
+####Creación y eliminación de archivos####
+
+8.-$touch nombre_del_archivo.txt ---> Crea un archivo vacío con el nombre especificado
+
+9.-$echo "contenido" > nombre_del_archivo.txt ---> crea un archivo con contenido especifico
+
+	nota: Tambien existen editores de texto, uno de los mas usados es nano
+	
+10.-$nano ---> abre el editor de texto nano
+
+11.-$rm nombre_del_archivo ---> Elimina un archivo especfico
+
+####Creación de directorios####
+
+12.-$mkdir nombre_del_directorio ---> crea un directorio con el nombre especificado
+
+13.-$rm -r ---> Elimina el directorio especificado y todos sus archivos y subdirectorios
+
+####Ejercicios Practicos####
+
+1.-Crear una carpeta con el nombre del estudiante
+2.-Moverse a la carpeta recien creda 
+2.-Crear un archivo de texto con los comentarios referentes a la primera clase
+
+ 
+
+
