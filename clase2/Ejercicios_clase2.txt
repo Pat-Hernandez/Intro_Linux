@@ -1,0 +1,98 @@
+####Introducción al Shell###
+
+####descarga de archivos e instalación de programas 
+
+$sudo apt install htop
+
+$htop
+
+###manipulación de archivos#####
+
+##Instalar utilidades de github
+
+1.-$sudo apt install git 
+
+2.-$git glone direccción_del_repositorio
+
+3.-ubicarse en la carpeta clase2/ejercicio y verificar la presencia del archivo himno.txt
+
+####crear un nuevo directorio titulado practica
+
+#Utilizar mkdir
+4.-$mkdir --help ---->Imprime las funciones de la instrucción mkdir
+
+###crear un subdirectorio por debajo del que acabamos de crear
+
+5.-$mkdir -p practica && cd practica   ---> && es una instrucción que puede interpretarse como "realiza la acción solo si la instrucción anterior es correcta 
+
+##comandos copiar, mover, renombrar y borrar archivos###
+
+###copiar archivos###
+
+##copiar un archivo a la carpeta practica
+6.-$ cp [origen] [destino] ---> realiza una copia de un archivo especifico
+
+##copiar un archivo y renombrar
+
+7.-$cp [origen] [destino/nuevo_nombre_del_archivo] ---> realiza una copia de un archivo en especifico y lo renombra
+
+##copiar un archivo en la misma carpeta##
+
+8.-$cp [nombre del archivo] [nombre del archivo] ----> realiza una copia del archivo en la misma ubicación de trabajo
+
+
+####mover archivos###
+
+###confirmar que estamos parados en el directorio /home/user/Intro_Linux/clase2/ejercicio/practica###
+
+
+9.-$mv [origen] [destino] ---> mueve un archivo a una ubicación especifica
+
+10.-$mv [origen/*.extencion] [destino]  ---->Mueve todos los archivos con extensiones especificas a una determinada ubicación
+
+11.-$mv [origen/nombre del archivo] [destino/nombre del archivo] ----> Mueve un archivo determinado y cambia el nombre.
+
+###manipular archivos de gran tamaño####
+
+###confirmar que estamos parados en el directorio /home/user/Intro_Linux/clase2/ejercicio####
+
+#visualizar archivos###mo
+
+12.-$more nombre del archivo ----> muestra el contenido del documento parcialmente sin posibilidad de edición
+
+13.-$cat nombre_del_archivo  ----> muestra el contenido completo del documento sin posibilidad de edición 
+
+14.-$cat nombre_del_archivo | head ----> muestra las primeras 10 lineas de texto de un archivo ### el caracter de barra vertical "|" indica la acción subsecuente al resultado, iniciando una tubería
+
+###agregar numeros de linea###
+
+15.-$cat -n nombre_del_archivo ---> agrega numeros de linea a un archivo de texto
+
+16.-$cat -n nombre_del_archivo | head ----> agrega numeros de linea a las 10 primeras lineas de texto ### head permite contar n lineas utilizando -numero_de_lineas
+
+##comprimir archivos##
+
+17.-$gzip nombre_del_archivo ----> comprime un archivo y elimina el archivo original ####los archivos comprimidos pueden explorarse con zlees y zcat 
+
+17.-$gzip -k nombre_del_archivo  ----> comprime un archivo e impide la eliminación del archivo original  
+
+18.-$gzip -d nombre_del_archivo.gz   ----> descomprime un archivo seleccionado 
+
+###crear lineas simbolicas###
+
+18.-$ ln -s [dirección_del_archivo] [nombre_de_la_liga_simbolica]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
