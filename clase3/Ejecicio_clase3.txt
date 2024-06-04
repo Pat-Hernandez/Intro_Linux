@@ -1,0 +1,78 @@
+####construcción de base de datos y alineamientos######
+
+####Instalación de blast y clustalw####
+
+ 1.-$sudo apt update 
+ 2.-$sudo apt install ncbi-blast+ clustalw
+ 
+ ####Construcción de base de datos local#####
+ 
+ ####ncbi cuenta con una base de datos en ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz y e 
+ puede descargar con  wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz
+ 
+ ###se recomienda la construcción de una base de datos segun los criterios de investigación a realizar####
+ 
+ #####descargar secuencias del genbank####
+ 
+ se recomienda el uso de la pagina del genbank para descargar secuencias para la respectiva construcción de la base de datos
+ 
+ En el directorio clase3/db se encuentran 3 archivos con secuencias descargadas.
+ 
+ ##concatenar archivos de texto##
+ 
+ 3.-$cat archivo1 archivo2 archivo_n > nombre_del_archivo  ##generar el archivo db.fasta
+ 
+ ###formatear base de datos###
+ 
+ ###usar makeblastdb
+ 
+ 4.-$makeblastdb -help -----> muestra las aplicaciones contenidas en makeblastdb
+ 
+ 5.-$makeblastdb -in archivo_de_secuencias_concatenadas.fasta -dbtype nucl
+ 
+ ###realizar alineamiento de nucleótidos###
+ 
+ vamos a utilizar la secuencia problema ubicada en el directorio clase3
+ 
+ 6.-$blastn -query secuencia_problema.fasta -db base_de_datos -out archivo_de_salida.out -outfmt formato (1,2,3,4,5....18)
+ 
+ 
+ Opciones de vista de alineación:
+ 0 = Por pares,
+ 1 = Consulta anclada que muestra identidades,
+ 2 = Consulta anclada sin identidades,
+ 3 = Consulta plana anclada que muestra identidades,
+ 4 = consulta plana anclada sin identidades,
+ 5 = EXPLOSIÓN XML,
+ 6 = tabular,
+ 7 = Tabular con líneas de comentarios,
+ 8 = Seqalign (Texto ASN.1),
+ 9 = Seqalign (ASN.1 binario),
+ 10 = valores separados por comas,
+ 11 = archivo BLAST (ASN.1),
+ 12 = secuencial (JSON),
+ 13 = BLAST JSON de varios archivos,
+ 14 = BLAST XML2 de varios archivos,
+ 15 = BLAST JSON de un solo archivo,
+ 16 = BLAST XML2 de un solo archivo,
+ 17 = Alineación/Mapa de Secuencia (SAM),
+ 18 = Informe del organismo
+ 
+ 
+###visualizar resultado####
+
+7.-$more archivo_de_salida
+
+###alineamiento utilizando clustalw
+
+clustalw -INFILE=sequences.fasta -OUTFILE=alignment.aln -OUTPUT=FASTA
+
+####ejercicio de evaluación 
+
+crear alineamientos locales utilizando blast y linux 
+
+a) deberá construir una base de datos 
+
+b) deberá presentar los archivos de salida 
+
+
